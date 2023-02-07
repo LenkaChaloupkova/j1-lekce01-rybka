@@ -7,6 +7,8 @@ import cz.czechitas.java.playground.Rybka;
 import javafx.scene.paint.Color;
 import cz.czechitas.java.playground.CzechitasGameApplication;
 
+import java.util.stream.IntStream;
+
 public class RybkaApplication extends CzechitasGameApplication {
     private Rybka rybka;
     private Kamen kamen;
@@ -31,30 +33,18 @@ public class RybkaApplication extends CzechitasGameApplication {
         kamen = new Kamen(200, 200);
         rybka = new Rybka(100, 100);
 
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-        rybka.plavatVpravo();
-
-
+        for (int i=0; i<20; i++){
+            rybka.plavatVpravo();
+        }
+        for (int i=0; i<20; i++){
+            rybka.plavatDolu();
+        }
+        for (int i=0; i<20; i++){
+            rybka.plavatVlevo();
+        }
+        for (int i=0; i<20; i++){
+            rybka.plavatNahoru();
+        }
     }
 
     public static void main(String[] args) {
